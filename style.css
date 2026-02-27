@@ -26,6 +26,12 @@ body {
 	background: #F8F8F8
 }
 
+.brands-swiper {
+	overflow: hidden;
+	width: 100%;
+	padding-bottom: 20px;
+}
+
 .header__text {
 	font-family: 'TT Lakes', sans-serif;
 	text-transform: uppercase;
@@ -44,8 +50,7 @@ body {
 	display: flex;
 	justify-content: space-between; 
 	align-items: center; 
-	padding-left: 16px;
-	margin-top: 20px;
+	padding: 0 16px;
 }
 
 .brands__card__button {
@@ -56,7 +61,10 @@ body {
 	background: #fff;
 	color: #FF3E79;
 	font-size: 20px;
-	margin: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
 }
 
 .swiper-wrapper {
