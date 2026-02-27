@@ -45,6 +45,7 @@ body {
 	justify-content: space-between; 
 	align-items: center; 
 	padding-left: 16px;
+	margin-top: 20px;
 }
 
 .brands__card__button {
@@ -58,24 +59,6 @@ body {
 	margin: 16px;
 }
 
-.swiper-pagination-bullet {
-	width: 8px;
-	height: 8px;
-	background: #D9D9D9;
-	opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-	background: #7E7E7E;
-}
-
-.brands-swiper {
-	display: block;
-	width: 100%;
-	overflow: hidden;
-	padding-bottom: 24px;
-}
-
 .swiper-wrapper {
 	display: flex;
 }
@@ -85,7 +68,20 @@ body {
 	margin-right: 16px;
 }
 
-.brands-grid,
-.toggle-btn {
-	display: none;
+.swiper-pagination {
+	margin-top: 15px;
+	margin-left: 36px;
+}
+
+.carousel__button--selected {
+	background: #B5B6BC;
+}
+
+.carousel__button {
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	background: #DDDDDD;
+	border-radius: 50%;
+	margin: 0 5px;
 }
