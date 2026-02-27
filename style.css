@@ -23,73 +23,82 @@
 }
 
 body {
-	background: #F8F8F8
-}
-
-.brands-swiper {
-	overflow: hidden;
-	width: 100%;
-	padding-bottom: 20px;
+  margin: 0;
+  padding: 16px;
+  background: #F8F8F8;
+  font-family: 'TT Lakes', sans-serif;
 }
 
 .header__text {
-	font-family: 'TT Lakes', sans-serif;
-	text-transform: uppercase;
-	color: #7E7E82;
-	font-size: 16px;
-	width: 288px;
-	font-weight: 400;
+  text-transform: uppercase;
+  color: #7E7E82;
+  font-size: 16px;
+  width: 288px;
+  font-weight: 400;
 }
 
-.brands__card {
-	width: 230px;
-	height: 72px;
-	border-radius: 6px;
-	border: 1px solid #EAEAEA;
-	background: #fff;
-	display: flex;
-	justify-content: space-between; 
-	align-items: center; 
-	padding: 0 16px;
+/* Контейнер карусели */
+.brands-swiper {
+  width: 100%;
+  overflow: hidden; /* обрезаем всё, что выходит за пределы */
+  padding-top: 16px;
 }
 
-.brands__card__button {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	border: 2px solid #FF3E79;
-	background: #fff;
-	color: #FF3E79;
-	font-size: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0;
-}
-
+/* Лента */
 .swiper-wrapper {
-	display: flex;
+  display: flex;
+  transition: transform 0.3s ease;
 }
 
+/* Слайд */
 .swiper-slide {
-	width: auto;
-	margin-right: 16px;
+  width: auto;
+  margin-right: 16px;
 }
 
+/* Карточка бренда */
+.brands__card {
+  width: 230px;
+  height: 72px;
+  border-radius: 6px;
+  border: 1px solid #EAEAEA;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+/* Кнопка внутри карточки */
+.brands__card__button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #FF3E79;
+  background: #fff;
+  color: #FF3E79;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Кружочки */
 .swiper-pagination {
-	margin-top: 15px;
-	margin-left: 36px;
-}
-
-.carousel__button--selected {
-	background: #B5B6BC;
+  margin-top: 16px;
+  text-align: center;
 }
 
 .carousel__button {
-	width: 12px;
-	height: 12px;
-	display: inline-block;
-	background: #DDDDDD;
-	border-radius: 50%;
-	margin: 0 5px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: #DDDDDD;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+
+.carousel__button--selected {
+  background: #B5B6BC;
 }

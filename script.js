@@ -1,43 +1,43 @@
-// Находим карусель
 const carousel = document.querySelector('.brands-swiper');
-const track = carousel.querySelector('.swiper-wrapper');
-const slides = Array.from(carousel.querySelectorAll('.swiper-slide'));
-const dots = Array.from(carousel.querySelectorAll('.carousel__button, .carousel__button--selected'));
 
-// Функция активации слайда и точки
-function goToSlide(index) {
-  const slide = slides[index];
-  if (!slide) return;
+if (carousel) {
+  const track = carousel.querySelector('.swiper-wrapper');
+  const slides = Array.from(carousel.querySelectorAll('.swiper-slide'));
+  const dots = Array.from(
+    carousel.querySelectorAll('.carousel__button, .carousel__button--selected')
+  );
 
-  // Прокрутка к нужному слайду
-  slide.scrollIntoView({
-    behavior: 'smooth',
-    inline: 'start',
-    block: 'nearest',
-  });
+  if (!slides.length || !dots.length) {
+    console.warn('Нет слайдов или точек для карусели');
+  } else {
+    let currentIndex = 0;
 
-  // Обновляем активный кружок
-  dots.forEach(dot => dot.classList.remove('carousel__button--selected'));
-  dots[index].classList.add('carousel__button--selected');
+    // ширина одного слайда (карточка + отступ)
+    const slideWidth = slides[0].offsetWidth + 16;
+
+    function goToSlide(index) {
+      if (index < 0 || index >= slides.length) return;
+
+      currentIndex = index;
+
+      // сдвигаем всю ленту
+      track.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+
+      // обновляем активный кружок
+      dots.forEach(dot => dot.classList.remove('carousel__button--selected'));
+      if (dots[currentIndex]) {
+        dots[currentIndex].classList.add('carousel__button--selected');
+      }
+    }
+
+    // клики по кружкам
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        goToSlide(index);
+      });
+    });
+
+    // стартовое состояние
+    goToSlide(0);
+  }
 }
-
-// Вешаем обработчики на точки
-dots.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    goToSlide(index);
-  });
-});
-
-// Стартовое состояние
-if (dots.length > 0) {
-  dots[0].classList.add('carousel__button--selected');
-}
-
-const swiper = new Swiper('.brands-swiper', {
-  slidesPerView: 1.2, // 1 карточка + кусочек следующей
-  spaceBetween: 16,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-});
