@@ -63,6 +63,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
+	margin: 4px;
 }
 
 .brands__card__button {

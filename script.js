@@ -53,10 +53,10 @@ if (toggleBtn) {
 
     if (container.classList.contains('expanded')) {
       toggleText.textContent = 'Скрыть';
-      toggleIcon.src = 'img/unwrap.svg';
+      toggleIcon.src = 'img/rollup.svg';
     } else {
       toggleText.textContent = 'Показать все';
-      toggleIcon.src = 'img/rollup.svg';
+      toggleIcon.src = 'img/unwrap.svg';
     }
   });
 }
