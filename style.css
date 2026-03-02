@@ -32,7 +32,7 @@ body {
 .header__text {
   text-transform: uppercase;
   color: #7E7E82;
-  font-size: 20px;
+  font-size: 18px;
   width: 288px;
   font-weight: 400;
 }
@@ -77,7 +77,7 @@ body {
   border: 2px solid #FF3E79;
   background: #fff;
   color: #FF3E79;
-  font-size: 20px;
+  font-size: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
