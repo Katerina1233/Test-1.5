@@ -41,3 +41,22 @@ if (carousel) {
     goToSlide(0);
   }
 }
+
+const container = document.querySelector('.brands-container');
+const toggleBtn = document.querySelector('.toggle-btn');
+const toggleText = document.querySelector('.toggle-btn__text');
+const toggleIcon = document.querySelector('.toggle-btn__icon');
+
+if (toggleBtn) {
+  toggleBtn.addEventListener('click', () => {
+    container.classList.toggle('expanded');
+
+    if (container.classList.contains('expanded')) {
+      toggleText.textContent = 'Скрыть';
+      toggleIcon.src = 'img/unwrap.svg';
+    } else {
+      toggleText.textContent = 'Показать все';
+      toggleIcon.src = 'img/rollup.svg';
+    }
+  });
+}
