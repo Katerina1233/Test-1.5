@@ -123,8 +123,8 @@ body {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 16px;
     row-gap: 12px;
-    max-height: 220px;
-    overflow: hidden;
+    max-height: 180px;
+    overflow: visible !important;
   }
 
   .brands-container.expanded .swiper-wrapper {
@@ -143,7 +143,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 16px;
     row-gap: 12px;
-    max-height: 220px;
+    max-height: 180px;
     overflow: hidden;
   }
 
@@ -158,11 +158,13 @@ body {
 
 @media (max-width: 767px) {
 	.brands-swiper {
-    overflow: visible;
+    overflow: visible !important;
+		padding-bottom: 32px;
   }
 
   .swiper-wrapper {
-    flex-wrap: nowrap !important;
+    position: relative;
+    z-index: 10;
   }
 
   .swiper-slide {
@@ -176,7 +178,9 @@ body {
 
   .swiper-pagination {
     margin-top: 16px;
-		margin-bottom: -20px;
+		margin-bottom: -40px;
+		position: relative;
+    z-index: 10;
   }
 
   .toggle-btn {
