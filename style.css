@@ -32,7 +32,7 @@ body {
 .content {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
   box-sizing: border-box;
 }
 
@@ -41,7 +41,7 @@ body {
   color: #7E7E82;
   font-size: 16px;
   font-weight: 400;
-	padding: 6px 24px 24px;
+	padding: 6px 16px 16px;
 }
 
 .brands-swiper {
@@ -51,7 +51,7 @@ body {
 }
 
 .brands__card {
-  width: 230px;
+  width: 240px;
   height: 72px;
   border-radius: 6px;
   border: 1px solid #EAEAEA;
@@ -122,7 +122,8 @@ body {
   .swiper-wrapper {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    column-gap: 16px;
+    row-gap: 1px;
     max-height: 160px;
     overflow: hidden;
   }
@@ -141,7 +142,8 @@ body {
   .swiper-wrapper {
     display: grid !important;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    column-gap: 16px;
+    row-gap: 8px;
     max-height: 160px;
     overflow: hidden;
   }
@@ -166,7 +168,7 @@ body {
   }
 
   .swiper-slide {
-    width: 280px !important;
+    width: calc(100% - 32px)
     margin-right: 16px !important;
 		flex-shrink: 0 !important;
   }
