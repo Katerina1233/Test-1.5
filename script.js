@@ -30,17 +30,18 @@ window.addEventListener('resize', initSwiper);
 // ------------------------------
 // 2. Повтор брендов на планшете/десктопе
 // ------------------------------
-window.addEventListener("load", () => {
-  if (window.innerWidth >= 768) {
-    const wrapper = document.querySelector('.swiper-wrapper');
-    const slides = Array.from(wrapper.children);
+document.addEventListener("DOMContentLoaded", () => {
+  // ждём, пока браузер применит стили
+  requestAnimationFrame(() => {
+    if (window.innerWidth >= 768) {
+      const wrapper = document.querySelector('.swiper-wrapper');
+      const slides = Array.from(wrapper.children);
 
-    for (let i = 0; i < 2; i++) {
+      // повторяем бренды только один раз
       slides.forEach(slide => wrapper.appendChild(slide.cloneNode(true)));
     }
-  }
+  });
 });
-
 
 // ------------------------------
 // 3. Кнопка "Показать все"
