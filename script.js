@@ -4,6 +4,19 @@
 let swiper = null;
 
 function initSwiper() {
+  const wrapper = document.querySelector('.swiper-wrapper');
+
+  if (window.innerWidth < 768 && wrapper && wrapper.dataset.duplicated) {
+    const slides = wrapper.querySelectorAll('.swiper-slide');
+    const half = slides.length / 2;
+
+    for (let i = half; i < slides.length; i++) {
+      slides[i].remove();
+    }
+
+    delete wrapper.dataset.duplicated;
+  }
+
   if (window.innerWidth < 768) {
     if (!swiper) {
       swiper = new Swiper('.brands-swiper', {
@@ -23,24 +36,21 @@ function initSwiper() {
   }
 }
 
+
 window.addEventListener('load', initSwiper);
 window.addEventListener('resize', initSwiper);
-
-
 
 // ------------------------------
 // 2. Повтор брендов на планшете/десктопе
 // ------------------------------
-document.addEventListener("DOMContentLoaded", () => {
-  if (window.innerWidth >= 768) {
-    const wrapper = document.querySelector('.swiper-wrapper');
-    if (wrapper && !wrapper.dataset.duplicated) {
-      const slides = Array.from(wrapper.children);
-      slides.forEach(slide => wrapper.appendChild(slide.cloneNode(true)));
-      wrapper.dataset.duplicated = 'true';
-    }
+if (window.innerWidth >= 768) {
+  const wrapper = document.querySelector('.swiper-wrapper');
+  if (wrapper && !wrapper.dataset.duplicated) {
+    const slides = Array.from(wrapper.children);
+    slides.forEach(slide => wrapper.appendChild(slide.cloneNode(true)));
+    wrapper.dataset.duplicated = 'true';
   }
-});
+}
 
 // ------------------------------
 // 3. Кнопка "Показать все"
