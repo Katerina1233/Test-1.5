@@ -31,7 +31,7 @@ window.addEventListener('resize', initSwiper);
 // ------------------------------
 // 2. Повтор брендов на планшете/десктопе
 // ------------------------------
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   if (window.innerWidth >= 768) {
     const wrapper = document.querySelector('.swiper-wrapper');
     if (wrapper && !wrapper.dataset.duplicated) {
