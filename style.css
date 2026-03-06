@@ -81,6 +81,15 @@ body {
   text-align: center;
 }
 
+.swiper-pagination-bullet {
+  background: #DDDDDD !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #B5B6BC !important;
+}
+
 .carousel__button {
   width: 10px;
   height: 10px;
@@ -171,6 +180,10 @@ body {
     width: auto !important;
     margin-right: 16px !important;
   }
+
+	.swiper-slide:first-child {
+    margin-left: 16px !important;
+	}
 
   .brands__card {
     width: 240px;
