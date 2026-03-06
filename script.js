@@ -72,15 +72,17 @@ const swiper = new Swiper('.brands-swiper', {
 });
 </script>
 
-const wrapper = document.querySelector('.swiper-wrapper');
+window.addEventListener("load", () => {
+  const wrapper = document.querySelector('.swiper-wrapper');
 
-if (window.innerWidth >= 1120) {
-  const slides = Array.from(wrapper.children);
-  const targetHeight = 350; // высота, которую нужно заполнить
+  if (window.innerWidth >= 1120) {
+    const slides = Array.from(wrapper.children);
 
-  while (wrapper.offsetHeight < targetHeight) {
-    slides.forEach(slide => {
-      wrapper.appendChild(slide.cloneNode(true));
-    });
+    // повторяем бренды 2 раза (можно увеличить)
+    for (let i = 0; i < 2; i++) {
+      slides.forEach(slide => {
+        wrapper.appendChild(slide.cloneNode(true));
+      });
+    }
   }
-}
+});
