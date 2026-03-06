@@ -61,6 +61,16 @@ if (toggleBtn) {
   });
 }
 
+<script>
+const swiper = new Swiper('.brands-swiper', {
+  slidesPerView: 'auto',
+  spaceBetween: 16,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
+</script>
 
 const wrapper = document.querySelector('.swiper-wrapper');
 
