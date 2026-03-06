@@ -60,3 +60,17 @@ if (toggleBtn) {
     }
   });
 }
+
+
+const wrapper = document.querySelector('.swiper-wrapper');
+
+if (window.innerWidth >= 1120) {
+  const slides = Array.from(wrapper.children);
+  const targetHeight = 350; // высота, которую нужно заполнить
+
+  while (wrapper.offsetHeight < targetHeight) {
+    slides.forEach(slide => {
+      wrapper.appendChild(slide.cloneNode(true));
+    });
+  }
+}

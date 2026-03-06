@@ -29,6 +29,11 @@ body {
   font-family: 'TT Lakes', sans-serif;
 }
 
+.content {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+
 .header__text {
   text-transform: uppercase;
   color: #7E7E82;
@@ -143,8 +148,10 @@ body {
     overflow: hidden;
   }
 
-  .brands-container.expanded .swiper-wrapper {
-    max-height: none;
+.brands-container.expanded .brands-swiper .swiper-wrapper {
+  max-height: none;
+}
+
   }
 
   .swiper-pagination {
