@@ -24,16 +24,9 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 24px;
   background: #F8F8F8;
   font-family: 'TT Lakes', sans-serif;
-}
-
-.content {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 24px;
-  box-sizing: border-box;
 }
 
 .header__text {
@@ -150,10 +143,8 @@ body {
     overflow: hidden;
   }
 
-.brands-container.expanded .brands-swiper .swiper-wrapper {
-  max-height: none;
-}
-
+  .brands-container.expanded .swiper-wrapper {
+    max-height: none;
   }
 
   .swiper-pagination {

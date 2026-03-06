@@ -60,29 +60,3 @@ if (toggleBtn) {
     }
   });
 }
-
-<script>
-const swiper = new Swiper('.brands-swiper', {
-  slidesPerView: 'auto',
-  spaceBetween: 16,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-});
-</script>
-
-window.addEventListener("load", () => {
-  const wrapper = document.querySelector('.swiper-wrapper');
-
-  if (window.innerWidth >= 1120) {
-    const slides = Array.from(wrapper.children);
-
-    // повторяем бренды 2 раза (можно увеличить)
-    for (let i = 0; i < 2; i++) {
-      slides.forEach(slide => {
-        wrapper.appendChild(slide.cloneNode(true));
-      });
-    }
-  }
-});
