@@ -20,15 +20,13 @@ function initSwiper() {
   if (window.innerWidth < 768) {
     if (!swiper) {
       swiper = new Swiper('.brands-swiper', {
-				slidesPerView: 'auto',
-				spaceBetween: 16,
-				slidesOffsetBefore: 16,
-				slidesOffsetAfter: 16,
-				pagination: {
-					el: '.swiper-pagination',
-					clickable: true,
-				},
-			});
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
     }
   } else {
     if (swiper) {
