@@ -2,8 +2,16 @@ const swiper = new Swiper(".swiper", {
   direction: "horizontal",
   loop: true,
 
+  // свайп пальцем
+  simulateTouch: true,
+  touchRatio: 1,
+  touchAngle: 45,
+  grabCursor: true, // курсор "рука" при перетягивании
+
+  // кликабельные точки
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
 
   navigation: {
