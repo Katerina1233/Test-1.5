@@ -1,75 +1,36 @@
-// ------------------------------
-// 1. Инициализация Swiper только на мобильных
-// ------------------------------
-let swiper = null;
+const swiper = new Swiper(".swiper", {
+  direction: "horizontal",
+  loop: true,
 
-function initSwiper() {
-  const wrapper = document.querySelector('.swiper-wrapper');
+  pagination: {
+    el: ".swiper-pagination",
+  },
 
-  if (window.innerWidth < 768 && wrapper && wrapper.dataset.duplicated) {
-    const slides = wrapper.querySelectorAll('.swiper-slide');
-    const half = slides.length / 2;
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+})
 
-    for (let i = half; i < slides.length; i++) {
-      slides[i].remove();
-    }
 
-    delete wrapper.dataset.duplicated;
-  }
+const toggleButton = document.querySelector(".brand__show-hide")
+const hiddenCards = document.querySelectorAll(".hidden-card")
 
-  if (window.innerWidth < 768) {
-    if (!swiper) {
-      swiper = new Swiper('.brands-swiper', {
-        slidesPerView: 'auto',
-        spaceBetween: 16,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      });
-    }
+let isExpanded = false
+
+toggleButton.addEventListener("click", () => {
+  isExpanded = !isExpanded
+  if (isExpanded) {
+    hiddenCards.forEach((card) => {
+      card.style.display = "flex"
+    })
+    toggleButton.textContent = "Скрыть"
+    toggleButton.classList.add("expanded")
   } else {
-    if (swiper) {
-      swiper.destroy(true, true);
-      swiper = null;
-    }
+    hiddenCards.forEach((card) => {
+      card.style.display = "none"
+    })
+    toggleButton.textContent = "Показать все"
+    toggleButton.classList.remove("expanded")
   }
-}
-
-
-window.addEventListener('load', initSwiper);
-window.addEventListener('resize', initSwiper);
-
-// ------------------------------
-// 2. Повтор брендов на планшете/десктопе
-// ------------------------------
-if (window.innerWidth >= 768) {
-  const wrapper = document.querySelector('.swiper-wrapper');
-  if (wrapper && !wrapper.dataset.duplicated) {
-    const slides = Array.from(wrapper.children);
-    slides.forEach(slide => wrapper.appendChild(slide.cloneNode(true)));
-    wrapper.dataset.duplicated = 'true';
-  }
-}
-
-// ------------------------------
-// 3. Кнопка "Показать все"
-// ------------------------------
-const container = document.querySelector('.brands-container');
-const toggleBtn = document.querySelector('.toggle-btn');
-const toggleText = document.querySelector('.toggle-btn__text');
-const toggleIcon = document.querySelector('.toggle-btn__icon');
-
-if (toggleBtn) {
-  toggleBtn.addEventListener('click', () => {
-    container.classList.toggle('expanded');
-
-    if (container.classList.contains('expanded')) {
-      toggleText.textContent = 'Скрыть';
-      toggleIcon.src = 'img/rollup.svg';
-    } else {
-      toggleText.textContent = 'Показать все';
-      toggleIcon.src = 'img/unwrap.svg';
-    }
-  });
-}
+})

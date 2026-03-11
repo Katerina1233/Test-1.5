@@ -1,81 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Практическая задача 2.1.3</title>
-  <link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-</head>
-<body>
-  <header class="header">
-    <h1 class="header__text">Ремонт техники различных брендов</h1>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-  <main class="content">
-		<div class="brands-container">
-    <div class="swiper brands-swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="brands__card">
-            <img src="img/Lenovo.svg" alt="Lenovo">
-            <button class="brands__card__button">&gt;</button>
+    <title>Service center</title>
+  </head>
+  <body>
+    <div class="brand">
+      <div class="brand-title">
+        <h2 class="brand-title__text">Ремонт техники различных брендов</h2>
+      </div>
+          
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="card">
+              <span class="img-card--lenovo"></span>
+              <button class="button-next" type="button"></button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <span class="img-card--samsung"></span>
+              <button class="button-next" type="button"></button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <span class="img-card--apple"></span>
+              <button class="button-next" type="button"></button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <span class="img-card--vievSonic"></span>
+              <button class="button-next" type="button"></button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <span class="img-card--bosch"></span>
+              <button class="button-next" type="button"></button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <span class="img-card--hp"></span>
+              <button class="button-next" type="button"></button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <span class="img-card--acer"></span>
+              <button class="button-next" type="button"></button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <span class="img-card--sony"></span>
+              <button class="button-next" type="button"></button>
+            </div>
           </div>
         </div>
-        <div class="swiper-slide">
-          <div class="brands__card">
-            <img src="img/SAMSUNG.svg" alt="SAMSUNG">
-            <button class="brands__card__button">&gt;</button>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="brands__card">
-            <img src="img/Apple.svg" alt="Apple">
-            <button class="brands__card__button">&gt;</button>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="brands__card">
-            <img src="img/ViewSonic.svg" alt="ViewSonic">
-            <button class="brands__card__button">&gt;</button>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="brands__card">
-            <img src="img/BOSCH.svg" alt="BOSCH">
-            <button class="brands__card__button">&gt;</button>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="brands__card">
-            <img src="img/hp.svg" alt="hp">
-            <button class="brands__card__button">&gt;</button>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="brands__card">
-            <img src="img/acer.svg" alt="acer">
-            <button class="brands__card__button">&gt;</button>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="brands__card">
-            <img src="img/SONY.svg" alt="SONY">
-            <button class="brands__card__button">&gt;</button>
-          </div>
+        <div class="swiper-buttons">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
-
       <div class="swiper-pagination"></div>
+      <div class="brand-repair">
+        <div class="card">
+          <span class="img-card--lenovo"></span>
+          <button class="button-next" type="button"></button>
+        </div>
+        <div class="card">
+          <span class="img-card--samsung"></span>
+          <button class="button-next" type="button"></button>
+        </div>
+        <div class="card">
+          <span class="img-card--apple"></span>
+          <button class="button-next" type="button"></button>
+        </div>
+        <div class="card">
+          <span class="img-card--vievSonic"></span>
+          <button class="button-next" type="button"></button>
+        </div>
+        <div class="card">
+          <span class="img-card--bosch"></span>
+          <button class="button-next" type="button"></button>
+        </div>
+        <div class="card">
+          <span class="img-card--hp"></span>
+          <button class="button-next" type="button"></button>
+        </div>
+        <div class="card">
+          <span class="img-card--acer"></span>
+          <button class="button-next" type="button"></button>
+        </div>
+        <div class="card">
+          <span class="img-card--sony"></span>
+          <button class="button-next" type="button"></button>
+        </div>
+        <div class="hidden-card">
+          <span class="img-card--lenovo"></span>
+          <button class="button-next" type="button"></button>
+        </div>
+        <div class="hidden-card">
+          <span class="img-card--samsung"></span>
+          <button class="button-next" type="button"></button>
+        </div>
+        <div class="hidden-card">
+          <span class="img-card--apple"></span>
+          <button class="button-next" type="button"></button>
+        </div>
+      </div>
+      <button class="brand__show-hide" type="button">Показать все</button>
     </div>
-		<button class="toggle-btn">
-       <span class="toggle-btn__text">Показать все</span>
-       <img class="toggle-btn__icon" src="img/unwrap.svg" alt="icon">
-    </button>
-		</div>
+  </div>
   </main>
-
-  <script src="script.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
