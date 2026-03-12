@@ -285,8 +285,13 @@ main {
     gap: 16px;
   }
 
-  .card,
-  .hidden-card,
+  .card {
+    display: flex;
+    width: 240px;
+  }
+  .hidden-card {
+    display: none;
+  }
   .extra-card {
     display: flex;
     width: 240px;
