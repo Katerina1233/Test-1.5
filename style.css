@@ -292,9 +292,7 @@ main {
     width: 240px;
   }
 
-	@media (min-width: 1120px) {
   .extra-card {
     display: flex !important;
   }
-}
 }
