@@ -22,7 +22,7 @@ const swiper = new Swiper(".swiper", {
 
 
 const toggleButton = document.querySelector(".brand__show-hide")
-const hiddenCards = document.querySelectorAll(".hidden-card")
+const hiddenCards = document.querySelectorAll(".hidden-card, .extra-card")
 
 let isExpanded = false
 
